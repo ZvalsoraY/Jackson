@@ -2,7 +2,8 @@ package com.mypacage.сlient;
 
 import java.io.Serializable;
 
-public class Dul implements Serializable {
+public class Dul{
+
     private int documentType;
     private String firstName;
     private String lastName;
@@ -19,5 +20,29 @@ public class Dul implements Serializable {
         this.secondName = secondName;
         this.number = number;
         this.series = series;
+    }
+
+    public int getDocumentType() {
+        return documentType;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public int getSeries() {
+        return series;
     }
 }

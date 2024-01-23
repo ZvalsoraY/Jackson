@@ -1,7 +1,20 @@
 package com.mypacage.сlient;
 
-public class ClientInfo extends ClientFindInfo{
-    public ClientInfo(int documentType, String firstName, String lastName, String secondName, int number, int series, int partyId) {
-        super(documentType, firstName, lastName, secondName, number, series, partyId);
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+import java.io.Serializable;
+@JacksonXmlRootElement(localName = "clientInfo")
+public class ClientInfo{
+
+    private ClientFindInfo clientFindInfo;
+    public ClientInfo(){
+    }
+
+    public ClientInfo(ClientFindInfo clientFindInfo) {
+        this.clientFindInfo = clientFindInfo;
+    }
+
+    public ClientFindInfo getClientFindInfo() {
+        return clientFindInfo;
     }
 }

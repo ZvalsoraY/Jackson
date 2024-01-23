@@ -1,14 +1,25 @@
 package com.mypacage.сlient;
 
-public class ClientFindInfo extends Dul{
+import java.io.Serializable;
+
+public class ClientFindInfo{
+
+    private Dul dul;
     private int partyId;
 
-    public ClientFindInfo(int partyId) {
+    public ClientFindInfo(){
+
+    }
+
+    public ClientFindInfo(Dul dul, int partyId) {
+        this.dul = dul;
         this.partyId = partyId;
     }
 
-    public ClientFindInfo(int documentType, String firstName, String lastName, String secondName, int number, int series, int partyId) {
-        super(documentType, firstName, lastName, secondName, number, series);
-        this.partyId = partyId;
+    public Dul getDul() {
+        return dul;
+    }
+    public int getPartyId() {
+        return partyId;
     }
 }

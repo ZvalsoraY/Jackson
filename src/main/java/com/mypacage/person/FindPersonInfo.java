@@ -1,14 +1,42 @@
 package com.mypacage.person;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class FindPersonInfo {
-    //("PersonName")
+    @JsonProperty("PersonName")
     private PersonName personName;
 
-    //@SerializedName("IdentityCard")
+    @JsonProperty("IdentityCard")
     private IdentityCard identityCard;
 
-    //@SerializedName("PartyID")
+    @JsonProperty("PartyID")
     private int partyID;
+
+    public FindPersonInfo() {
+    }
+
+    public FindPersonInfo(PersonName personName, IdentityCard identityCard, int partyID) {
+        this.personName = personName;
+        this.identityCard = identityCard;
+        this.partyID = partyID;
+    }
+
+    public PersonName getPersonName() {
+        return personName;
+    }
+
+    public IdentityCard getIdentityCard() {
+        return identityCard;
+    }
+
+    public int getPartyID() {
+        return partyID;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("{PersonName:%s,IdentityCard:%s,PartyID:%s}", personName, identityCard, partyID);
+    }
 }
