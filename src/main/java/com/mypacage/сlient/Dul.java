@@ -1,7 +1,5 @@
 package com.mypacage.сlient;
 
-import java.io.Serializable;
-
 public class Dul{
 
     private int documentType;

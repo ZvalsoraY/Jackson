@@ -1,8 +1,6 @@
 package com.mypacage.person;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class FindPersonInfo {
     @JsonProperty("PersonName")

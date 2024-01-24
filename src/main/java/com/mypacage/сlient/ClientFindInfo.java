@@ -1,14 +1,11 @@
 package com.mypacage.сlient;
 
-import java.io.Serializable;
-
 public class ClientFindInfo{
 
     private Dul dul;
     private int partyId;
 
     public ClientFindInfo(){
-
     }
 
     public ClientFindInfo(Dul dul, int partyId) {
